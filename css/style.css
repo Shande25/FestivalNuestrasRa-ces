@@ -1,0 +1,217 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fff;
+    color: #000;
+  }
+  
+  header {
+    background-color: #000;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .nav a {
+    color: #ff760b;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  .social-icons {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  .social-icons a {
+    color: #ff760b;
+    margin-right: 10px;
+    font-size: 20px;
+    text-decoration: none;
+  }
+  
+  .search-bar {
+    background-color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .search-bar input {
+    padding: 5px;
+    width: 200px;
+    border: 1px solid #000;
+    color: #000;
+  }
+  
+  .search-bar button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #ff760b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .hero-image {
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-height: 500px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  .gallery img {
+    height: 400px;
+    width: auto;
+    border-radius: 8px;
+    border: 2px solid #000;
+  }
+  
+  .bank-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding: 40px;
+    background-color: #fff;
+  }
+  
+  .bank-option {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .bank-option.reverse {
+    flex-direction: row-reverse;
+    background-color: #fff;
+  }
+  
+  .bank-image img {
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid #000;
+  }
+  
+  .bank-text {
+    max-width: 500px;
+  }
+  
+  .bank-text h4 {
+    font-size: 1.8rem;
+    color: #8bd11a;
+    margin-bottom: 20px;
+  }
+  
+  .bank-text p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  .bank-text button {
+    background-color: #ffb10b;
+    color: #000;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  .bank-option .bank-text h4,
+  .bank-option .bank-text p,
+  .bank-option .bank-text button {
+    font-size: 1.3rem;
+  }
+  .bank-option.reverse .bank-text h4,
+  .bank-option.reverse .bank-text p,
+  .bank-option.reverse .bank-text button {
+    font-size: 1.3rem;
+  }
+
+  .newsletter {
+    background: #fcc57e;  
+    padding: 20px;
+    text-align: center;
+    color: #000;
+    border-radius: 2px;
+    max-width: 400px; 
+    margin: auto; 
+    margin-bottom: 40px; 
+}
+
+
+  .newsletter form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #000;
+    color: #000;
+  }
+  
+  .newsletter button {
+    background-color: #8bd11a; 
+    color: black;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  
+  footer {
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    font-size: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .footer-section h4 {
+    margin-bottom: 5px;
+    color: #ffb10b;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    width: 100%;
+    padding-top: 10px;
+    color: #ffb10b;
+  }
+  
