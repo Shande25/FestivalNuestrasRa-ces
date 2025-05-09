@@ -36,30 +36,79 @@ body {
     text-decoration: none;
   }
   
-  .search-bar {
-    background-color: #fff;
-    padding: 15px;
-    text-align: center;
-    border-bottom: 1px solid #ccc;
-  }
+  /* Cuando está en modo oscuro, el header (navbar) cambia a blanco */
+header.light-navbar {
+  background-color: white;
+}
+
+/* Cambiar color de texto y enlaces en el header para modo claro */
+header.light-navbar a,
+header.light-navbar .social-icons a,
+header.light-navbar .theme-toggle {
+  color: #ff760b!important;
+}
+
   
-  .search-bar input {
-    padding: 5px;
-    width: 200px;
-    border: 1px solid #000;
-    color: #000;
-  }
-  
-  .search-bar button {
-    padding: 5px 10px;
-    margin: 0 5px;
-    background-color: #ff760b;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 4px;
-  }
+  body.dark-theme {
+  background-color: #121212; /* Fondo oscuro para todo el body */
+  color: #ffffff; /* Texto blanco */
+}
+
+/* Modifica la sección de la galería */
+body.dark-theme .gallery {
+  background-color: #121212; /* Fondo oscuro para la galería */
+}
+
+body.dark-theme .gallery img {
+  border: 2px solid #ffffff; /* Cambia el borde de las imágenes a blanco */
+}
+
+/* Modifica la sección de las opciones de banco */
+body.dark-theme .bank-section {
+  background-color: #121212; /* Fondo oscuro para la sección */
+}
+
+body.dark-theme .bank-option {
+  background-color: #1a1a1a; /* Fondo oscuro para las opciones de banco */
+}
+
+body.dark-theme .bank-text {
+  color: #ffffff; /* Texto blanco en la sección del banco */
+}
+
+body.dark-theme button {
+  background-color: #ffffff; /* Mantener los botones con el color original */
+}
+
+body.dark-theme .hero-image {
+  background-color: #121212; /* Fondo oscuro para la imagen hero */
+}
+
+body.dark-theme footer {
+  background-color: #121212; /* Fondo oscuro en el footer */
+  color: #ffffff; /* Texto blanco en el footer */
+}
+
+body.dark-theme .carousel button {
+  background-color: rgba(109, 108, 108, 0.2); /* fondo claro translúcido */
+  color: #fffefe; /* color llamativo sobre fondo oscuro */
+}
+
+body.dark-theme .carousel button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+  .theme-toggle {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: #ff760b;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.2);
+}
   
   .hero-image {
     width: 100%;

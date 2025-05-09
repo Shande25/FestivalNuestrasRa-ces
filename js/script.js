@@ -51,7 +51,29 @@ window.addEventListener('scroll', () => {
   }
 });
 
-document.querySelector('.back-to-top').addEventListener('click', () => {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const themeToggleBtn = document.getElementById("toggle-theme");
+  const icon = themeToggleBtn.querySelector("i");
+  const body = document.body;
+  const header = document.querySelector("header");
+
+  themeToggleBtn.addEventListener("click", () => {
+    body.classList.toggle("dark-theme");
+
+    // Cambiar ícono
+    if (body.classList.contains("dark-theme")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+      header.classList.add("light-navbar");
+    } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+      header.classList.remove("light-navbar");
+    }
+  });
 });
+
+
 
