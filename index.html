@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Music Gallery</title>
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
@@ -40,7 +41,7 @@
     <img src="image/prubaimagen.jpg" alt="music4" />
   </section>
 
-  <section class="bank-section">
+  <section class="bank-section fade-in">
     <div class="bank-option">
       <div class="bank-image">
         <img src="image/Prueba1.jpeg" alt="Escenario de música en vivo" />
@@ -53,7 +54,7 @@
         <button>Compra tus Entradas</button>
       </div>
     </div>
-    <div class="bank-option reverse">
+    <div class="bank-option reverse fade-in">
       <div class="bank-text">
         <h4>Zona VIP</h4>
         <p>
@@ -65,7 +66,7 @@
         <img src="image/Prueba2.jpeg" alt="Zona VIP Festival" />
       </div>
     </div>
-    <div class="bank-option">
+    <div class="bank-option fade-in">
       <div class="bank-image">
         <img src="image/Prueba3.jpeg" alt="Artistas en el escenario" />
       </div>
@@ -79,21 +80,60 @@
     </div>
 </section>
 
-  
+<section class="carousel">
+  <div class="carousel-container">
+    <div class="carousel-slide">
+      <img src="image/Musica_2.png" alt="Imagen 1">
+      <img src="image/Musica_2.png" alt="Imagen 2">
+      <img src="image/Musica_2.png" alt="Imagen 3">
+      <img src="image/Musica_2.png" alt="Imagen 4">
+    </div>
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
+</section>
 
   <section class="newsletter">
+  <div class="form-container">
     <h3>Subscribe our updates!</h3>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-    <form>
-        <input type="text" placeholder="Cedula" required />
-      <input type="text" placeholder="Nombres" required />
-      <input type="text" placeholder="Apellidos" required />
-      <input type="email" placeholder="CorreoElectronico" required />
-      <input type="text" placeholder="Numero de Telefono" required />
-      <input type="text" placeholder="Barrio" required />
-      <button type="text">Enviar</button>
+    <form action="form-handler.php" method="POST">
+      <input type="text" name="Cedula" placeholder="Cédula" required />
+      <input type="text" name="Nombres" placeholder="Nombres" required />
+      <input type="text" name="Apellidos" placeholder="Apellidos" required />
+      <input type="email" name="CorreoElectronico" placeholder="Correo Electrónico" required />
+      <input type="text" name="Telefono" placeholder="Número de Teléfono" required />
+      <input type="text" name="Barrio" placeholder="Barrio" required />
+      <button type="submit">Enviar</button>
     </form>
-  </section>
+  </div>
+
+  <div class="newsletter-image">
+  <img src="image/prubaimagen.jpg" alt="Imagen relacionada con la newsletter" />
+</div>
+</section>
+
+
+<div class="info-section">
+  <h2>Conoce más sobre:</h2>
+  <div class="card-grid">
+    <a href="#" class="info-card">
+      <img src="image/handsup_1707226_20240822123741.jpg" alt="Mi Banco Banco me enseña">
+    </a>
+    <a href="#" class="info-card">
+      <img src="image/Musica_2.png" alt="COSEDE">
+    </a>
+    <a href="#" class="info-card">
+      <img src="image/handsup_1707226_20240822123741.jpg" alt="EDÚCATE">
+    </a>
+    <a href="#" class="info-card">
+      <img src="image/Musica_2.png" alt="Aula Virtual BdP">
+    </a>
+    <a href="#" class="info-card">
+      <img src="image/handsup_1707226_20240822123741.jpg" alt="UAFE">
+    </a>
+  </div>
+</div>
 
   <footer>
     <div class="footer-section">
@@ -115,7 +155,7 @@
       <p>Copyright © 2025 Your Company Name</p>
     </div>
   </footer>
-
+<button class="back-to-top">↑</button>
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -78,15 +78,15 @@ body {
   .gallery {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 100px;
     padding: 20px;
     background-color: #fff;
   }
   
   .gallery img {
-    height: 400px;
+    height: 300px;
     width: auto;
-    border-radius: 8px;
+    border-radius: 3px;
     border: 2px solid #000;
   }
   
@@ -102,7 +102,7 @@ body {
     display: flex;
     align-items: center;
     gap: 30px;
-    background-color: #f0f0f0;
+    background-color: #e9e6e6;
     padding: 20px;
     border-radius: 10px;
   }
@@ -114,7 +114,7 @@ body {
   
   .bank-image img {
     width: 300px;
-    border-radius: 20px;
+    border-radius: 2px;
     border: 1px solid #000;
   }
   
@@ -123,8 +123,8 @@ body {
   }
   
   .bank-text h4 {
-    font-size: 1.8rem;
-    color: #8bd11a;
+    font-size: 1.9rem;
+    color: #ff760b;
     margin-bottom: 20px;
   }
   
@@ -135,7 +135,7 @@ body {
   
   .bank-text button {
     background-color: #ffb10b;
-    color: #000;
+    color: #1a1a1a;
     border: none;
     padding: 12px 20px;
     border-radius: 4px;
@@ -147,51 +147,164 @@ body {
   .bank-option .bank-text h4,
   .bank-option .bank-text p,
   .bank-option .bank-text button {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   .bank-option.reverse .bank-text h4,
   .bank-option.reverse .bank-text p,
   .bank-option.reverse .bank-text button {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
 
-  .newsletter {
-    background: #fcd9ad;  
-    padding: 20px;
-    text-align: center;
-    color: #000;
-    border-radius: 10px;
-    max-width: 400px; 
-    margin: auto; 
-    margin-bottom: 40px; 
+  .carousel {
+    position: relative;
+    width: 1000px;
+    max-width: px;
+    margin: 50px auto;
+    overflow: hidden;
+  }
+  
+  .carousel-container {
+    position: relative;
+  }
+  
+  .carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .carousel-slide img {
+    width: 100%;
+    flex-shrink: 0;
+    height: 400px;
+    object-fit: cover;
+  }
+  
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.2); 
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 24px;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+  }
+  
+  .carousel button:hover {
+    background-color: rgba(0, 0, 0, 0.4); 
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+
+.newsletter {
+  background: #f7eee3;
+  padding: 20px;
+  text-align: center;
+  color: #000;
+  border-radius: 10px;
+  max-width: 900px; 
+  margin: auto;
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  overflow: hidden; 
+  height: 400px; 
+}
+
+.newsletter form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  gap: 10px;
+  width: 94%; 
+}
+
+.newsletter input {
+  padding: 7px;
+  width: 100%;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.newsletter button {
+  padding: 12px 20px;
+  width: auto; 
+  background-color: #12ee0a;
+  color: black;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+  align-self: center; 
+}
+
+.newsletter-image {
+  width: 50%;
+  height: 100%;    
+  border-radius: 20px;      
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  overflow: hidden;        
+}
+
+.newsletter-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       
+  border-radius: 10px;
+}
+
+.info-section {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.info-section h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.info-card {
+  display: block;
+  width: 270px;
+  height: 150px;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f0f0f0;
+  transition: transform 0.3s ease;
+}
+
+.info-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.info-card:hover {
+  transform: scale(1.05);
 }
 
 
-  .newsletter form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-  }
-
-  .newsletter input,
-  .newsletter button {
-    padding: 8px;
-    width: 100%;
-    border: 1px solid #000;
-    color: #000;
-  }
-  
-  .newsletter button {
-    background-color: #12ee0a; 
-    color: black;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-    border-radius: 4px;
-  }
-  
   
   footer {
     background-color: #000;
@@ -214,4 +327,78 @@ body {
     padding-top: 10px;
     color: #ffb10b;
   }
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff760b;
+  color: white;
+  border: none;
+  width: 35px; 
+  height: 35px; 
+  border-radius: 50%; 
+  cursor: pointer;
+  font-size: 24px; 
+  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.back-to-top:hover {
+  background-color: #ff5c00;
+}
+
+
+
+  /* Dinamismo */
+  .fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.bank-text button:hover {
+  background-color: #ff760b;
+  transform: scale(1.1);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.parallax {
+  background-image: url('image/LogoFestival.png');
+  height: 500px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.carousel-slide img {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+footer {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+footer:hover {
+  background-color: #333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+
   
