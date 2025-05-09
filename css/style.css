@@ -98,6 +98,15 @@ body.dark-theme .carousel button:hover {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+body.dark-theme .back-to-top {
+  background-color: rgb(255, 252, 252); /* Fondo claro semitransparente */
+  color: #f56c04; /* Color del ícono (flecha) */
+}
+
+body.dark-theme .back-to-top:hover {
+  background-color: rgba(255, 255, 255, 0.5); /* Más visible al pasar el mouse */
+}
+
   .theme-toggle {
   background: none;
   border: none;
