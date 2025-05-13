@@ -7,45 +7,86 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+ #video-background {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -2;
+  object-fit: cover;
+  filter: brightness(0.6); 
+  opacity: 0.6; 
+}
+
+    #overlay-image {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('image/descarga.jpg') center center no-repeat;
+      background-size: cover;
+      mix-blend-mode: screen;
+      opacity: 0.99;
+      z-index: -1;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <div class="nav">
-  <!-- Íconos sociales al inicio -->
-  <div class="social-icons">
-    <a href="#"><i class="fab fa-facebook-f"></i></a>
-    <a href="#"><i class="fab fa-instagram"></i></a>
-    <a href="#"><i class="fab fa-tiktok"></i></a>
+   <video autoplay muted loop id="video-background">
+    <source src="https://festivaldelacancion.ec/wp-content/themes/fesnace-wp/assets/video/video-cover.mp4" type="video/mp4">
+    Tu navegador no soporta el video de fondo.
+  </video>
+
+  <div id="overlay-image"></div>
+
+  <header>
+    <!-- Redes sociales en el lado izquierdo -->
+     <div class="social-icons">
+    <a href="https://www.facebook.com/share/1BieFJF4WG/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/festival.nuestras.raices/?utm_source=ig_web_button_share_sheet"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@festival.nuestras?_t=ZM-8wIojcN8lde&_r=1"><i class="fab fa-tiktok"></i></a>
   </div>
 
-  <!-- Botón de modo oscuro -->
-  <button id="toggle-theme" class="theme-toggle">
-    <i class="fas fa-moon"></i>
-  </button>
+    <!-- Letras del navbar en el centro -->
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Sobre el festival</a>
+      <a href="#">Galería</a>
+      <a href="#">Noticias</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </nav>
+  <section class="hero">
+    <div class="hero-text">
+      <img src="image/LogoFestival.png" alt="Logo Festival">
+      <p>El Festival "Nuestras Raíces" es una iniciativa cultural que busca recuperar y fortalecer la música popular en Quito, especialmente entre los jóvenes. El proyecto se desarrollará en varias fases, que incluyen:</p>
+      <button class="btn-inscribirse">Inscripciones</button>
+    </div>
+    <div class="hero-img">
+      <img src="/mnt/data/e1bcf9e4-3d7e-4d6d-a020-214c4e7b72d4.png" alt="Cantante festival">
+    </div>
+  </section>
+  <div class="musical-notes"></div>
+  
+  
+<div class="gallery ">
+  <img src="image/prubaimagen.jpg" onclick="openLightbox(0)">
+  <img src="image/prubaimagen.jpg"onclick="openLightbox(1)">
+  <img src="image/prubaimagen.jpg" onclick="openLightbox(2)">
+  <img src="image/prubaimagen.jpg" onclick="openLightbox(3)">
 </div>
 
-      </header>
-      
 
+<!-- Recuadro flotante para previsualización -->
+<div id="previewBox" class="preview-box">
+  <span class="close-btn" onclick="closePreview()">✖</span>
+  <img id="previewImg" src="" alt="Vista previa">
+</div>
 
-
-  <section class="hero-image">
-    <img src="image/LogoFestival.png" alt="Festival Banner" class="festival-logo" />
-  </section>
-  
-  
-  <section class="gallery">
-    <img src="image/prubaimagen.jpg" alt="music1" />
-    <img src="image/prubaimagen.jpg" alt="music2" />
-    <img src="image/prubaimagen.jpg" alt="music3" />
-    <img src="image/prubaimagen.jpg" alt="music4" />
-  </section>
 
   <section class="bank-section fade-in">
     <div class="bank-option">
@@ -53,18 +94,18 @@
         <img src="image/Prueba1.jpeg" alt="Escenario de música en vivo" />
       </div>
       <div class="bank-text">
-        <h4>Festival de Música En Vivo</h4>
+        <h4>Selección de artistas emergentes:</h4>
         <p>
-          Vive la emoción del festival más esperado del año. Disfruta de tus artistas favoritos en el escenario principal y vive una experiencia única.
+          Buscando talentos locales que puedan participar en el festival.
         </p>
         <button>Compra tus Entradas</button>
       </div>
     </div>
     <div class="bank-option reverse fade-in">
       <div class="bank-text">
-        <h4>Zona VIP</h4>
+        <h4>Festivales en parroquias:</h4>
         <p>
-          Accede a la mejor zona del festival con entradas VIP. Disfruta de un servicio exclusivo, bebidas premium y vista privilegiada al escenario.
+          Organizando eventos en diferentes parroquias de Quito para fomentar la participación comunitaria.
         </p>
         <button>Conoce Más</button>
       </div>
@@ -77,11 +118,23 @@
         <img src="image/Prueba3.jpeg" alt="Artistas en el escenario" />
       </div>
       <div class="bank-text">
-        <h4>Artistas Confirmados</h4>
+        <h4>Actividades complementarias:</h4>
         <p>
-          Conoce a los artistas y bandas que estarán presentes en el festival. ¡No te pierdas el concierto de tu vida!
+          Probablemente talleres, charlas o otras actividades que complementen el festival.
         </p>
         <button>Ver Lineup</button>
+      </div>
+    </div>
+    <div class="bank-option reverse fade-in">
+      <div class="bank-text">
+        <h4>Gran premiación y clausura:</h4>
+        <p>
+          Un evento final que reunirá a los mejores talentos y premiará a los ganadores.
+        </p>
+        <button>Conoce Más</button>
+      </div>
+      <div class="bank-image">
+        <img src="image/Prueba2.jpeg" alt="Zona VIP Festival" />
       </div>
     </div>
 </section>
@@ -163,5 +216,13 @@
   </footer>
 <button class="back-to-top">↑</button>
   <script src="js/script.js"></script>
+  <div id="lightbox" class="lightbox">
+  <span class="close" onclick="closeLightbox()">&times;</span>
+  <img class="lightbox-img" id="lightbox-img">
+  <a class="prev" onclick="changeImage(-1)">&#10094;</a>
+  <a class="next" onclick="changeImage(1)">&#10095;</a>
+</div>
+
 </body>
+
 </html>

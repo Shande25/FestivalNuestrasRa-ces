@@ -1,97 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background: #fff;
-    color: #000;
-  }
+  background: linear-gradient(to right, #1f1c2c, #928DAB);
+  color: white;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: transparent;
+}
+
+
+/* Agrega aquí tus otros estilos para header, nav, hero, etc. */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  color: #FF9900;
+}
+
+nav a {
+  color: white;
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 300;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+  background: url('https://images.unsplash.com/photo-1549899594-92e38f2286f3?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+  height: 100vh;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h1 {
+  font-size: 3.5em;
+  margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+  color: #FF9900;
+}
+
+.hero-text p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+
+.btn-inscribirse {
+  padding: 15px 30px;
+  background: linear-gradient(45deg, #FF9900, #C73BFF);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+
+.btn-inscribirse:hover {
+  background: linear-gradient(45deg, #C73BFF, #FF9900);
+}
+
+.hero-img {
+  max-width: 45%;
+}
+
+.hero-img img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.musical-notes {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: url('https://cdn.pixabay.com/photo/2013/07/12/14/07/music-147111_1280.png') repeat-x center bottom;
+  opacity: 0.4;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px; /* Aumenta el espacio entre los íconos */
+}
+
+.social-icons a {
+  color: white; /* Cambia el color a blanco */
+  font-size: 24px; /* Ajusta el tamaño de los íconos si lo deseas */
+  transition: color 0.3s ease; /* Efecto de transición para el color */
+}
+
+.social-icons a:hover {
+  color: #ff760b; /* Color para el hover si quieres un cambio cuando el usuario pase el cursor */
+}
+
   
-  header {
-    background-color: #000;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .nav a {
-    color: #ff760b;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-  }
-  
-  .social-icons {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .social-icons a {
-    color: #ff760b;
-    margin-right: 10px;
-    font-size: 20px;
-    text-decoration: none;
-  }
-  
-  /* Cuando está en modo oscuro, el header (navbar) cambia a blanco */
+/* Pagina cambiar a dark*/
 header.light-navbar {
   background-color: white;
 }
 
-/* Cambiar color de texto y enlaces en el header para modo claro */
+
 header.light-navbar a,
 header.light-navbar .social-icons a,
 header.light-navbar .theme-toggle {
   color: #ff760b!important;
 }
 
-  
   body.dark-theme {
-  background-color: #121212; /* Fondo oscuro para todo el body */
-  color: #ffffff; /* Texto blanco */
+  background-color: #121212; 
+  color: #ffffff; 
 }
 
-/* Modifica la sección de la galería */
 body.dark-theme .gallery {
-  background-color: #121212; /* Fondo oscuro para la galería */
+  background-color: #121212; 
 }
 
 body.dark-theme .gallery img {
-  border: 2px solid #ffffff; /* Cambia el borde de las imágenes a blanco */
+  border: 2px solid #ffffff; 
 }
 
-/* Modifica la sección de las opciones de banco */
+
 body.dark-theme .bank-section {
-  background-color: #121212; /* Fondo oscuro para la sección */
+  background-color: #121212; 
 }
 
 body.dark-theme .bank-option {
-  background-color: #1a1a1a; /* Fondo oscuro para las opciones de banco */
+  background-color: #1a1a1a; 
 }
 
 body.dark-theme .bank-text {
-  color: #ffffff; /* Texto blanco en la sección del banco */
+  color: #ffffff;
 }
 
 body.dark-theme button {
-  background-color: #ffffff; /* Mantener los botones con el color original */
+  background-color: #ffffff; 
 }
 
 body.dark-theme .hero-image {
-  background-color: #121212; /* Fondo oscuro para la imagen hero */
+  background-color: #121212; 
 }
 
 body.dark-theme footer {
-  background-color: #121212; /* Fondo oscuro en el footer */
-  color: #ffffff; /* Texto blanco en el footer */
+  background-color: #121212;
+  color: #ffffff; 
 }
 
 body.dark-theme .carousel button {
-  background-color: rgba(109, 108, 108, 0.2); /* fondo claro translúcido */
-  color: #fffefe; /* color llamativo sobre fondo oscuro */
+  background-color: rgba(109, 108, 108, 0.2); 
+  color: #fffefe; 
 }
 
 body.dark-theme .carousel button:hover {
@@ -99,15 +175,17 @@ body.dark-theme .carousel button:hover {
 }
 
 body.dark-theme .back-to-top {
-  background-color: rgb(255, 252, 252); /* Fondo claro semitransparente */
-  color: #f56c04; /* Color del ícono (flecha) */
+  background-color: rgb(255, 252, 252); 
+  color: #f56c04; 
 }
 
 body.dark-theme .back-to-top:hover {
-  background-color: rgba(255, 255, 255, 0.5); /* Más visible al pasar el mouse */
+  background-color: rgba(255, 255, 255, 0.5); 
 }
 
-  .theme-toggle {
+/* Pagina cambiar a dark*/
+  
+.theme-toggle {
   background: none;
   border: none;
   font-size: 20px;
@@ -118,7 +196,75 @@ body.dark-theme .back-to-top:hover {
 .theme-toggle:hover {
   transform: scale(1.2);
 }
-  
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.9);
+  text-align: center;
+}
+
+.lightbox-img {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 15px;
+}
+
+.close {
+  position: absolute;
+  top: 20px; right: 35px;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 60px;
+  padding: 16px;
+  margin-top: -50px;
+  user-select: none;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+  .preview-box {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  max-width: 90%;
+  background: white;
+  padding: 20px;
+  z-index: 9999;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+}
+
+.preview-box img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  color: black;
+}
+
   .hero-image {
     width: 100%;
     overflow: hidden;
@@ -146,6 +292,7 @@ body.dark-theme .back-to-top:hover {
     width: auto;
     border-radius: 3px;
     border: 2px solid #000;
+    cursor: pointer;
   }
   
   .bank-section {
@@ -189,6 +336,7 @@ body.dark-theme .back-to-top:hover {
   .bank-text p {
     font-size: 1.2rem;
     margin-bottom: 20px;
+    color: #000;
   }
   
   .bank-text button {
@@ -219,6 +367,7 @@ body.dark-theme .back-to-top:hover {
     max-width: px;
     margin: 50px auto;
     overflow: hidden;
+    
   }
   
   .carousel-container {
