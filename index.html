@@ -8,30 +8,31 @@
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 <style>
- #video-background {
+#overlay-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('image/FondoFestival.jpeg') center center no-repeat;
+  background-size: cover;
+  z-index: -2; /* MÁS AL FONDO */
+}
+
+#video-background {
   position: fixed;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: -2;
   object-fit: cover;
-  filter: brightness(0.6); 
+  z-index: -1; 
+  mix-blend-mode: screen; 
   opacity: 0.6; 
+  pointer-events: none; 
 }
 
-    #overlay-image {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('image/descarga.jpg') center center no-repeat;
-      background-size: cover;
-      mix-blend-mode: screen;
-      opacity: 0.99;
-      z-index: -1;
-    }
+
   </style>
 </head>
 <body>
@@ -60,24 +61,31 @@
     </nav>
   </header>
 
-  <section class="hero">
+<section class="hero">
+  <div class="hero-left">
     <div class="hero-text">
-      <img src="image/LogoFestival.png" alt="Logo Festival">
-      <p>El Festival "Nuestras Raíces" es una iniciativa cultural que busca recuperar y fortalecer la música popular en Quito, especialmente entre los jóvenes. El proyecto se desarrollará en varias fases, que incluyen:</p>
-      <button class="btn-inscribirse">Inscripciones</button>
+      <h2>Kristina Dalgo te invita al</h2>
+      <img src="image/LogoFestival.png" alt="Logo Festival" />
+      <p>
+        El Festival "Nuestras Raíces" es una iniciativa cultural que busca
+        recuperar y fortalecer la música popular en Quito.El proyecto se desarrollará en varias fases, que incluyen:
+      </p>
     </div>
-    <div class="hero-img">
-      <img src="/mnt/data/e1bcf9e4-3d7e-4d6d-a020-214c4e7b72d4.png" alt="Cantante festival">
-    </div>
-  </section>
+    <button class="btn-inscribirse">Inscripciones</button>
+  </div>
+  <div class="hero-img">
+    <img src="image/Cantante.png" alt="Cantante festival" />
+  </div>
+</section>
+
   <div class="musical-notes"></div>
   
   
 <div class="gallery ">
-  <img src="image/prubaimagen.jpg" onclick="openLightbox(0)">
-  <img src="image/prubaimagen.jpg"onclick="openLightbox(1)">
-  <img src="image/prubaimagen.jpg" onclick="openLightbox(2)">
-  <img src="image/prubaimagen.jpg" onclick="openLightbox(3)">
+  <img src="image/Festival.jpeg" onclick="openLightbox(0)">
+  <img src="image/Festival.jpeg"onclick="openLightbox(1)">
+  <img src="image/Festival.jpeg" onclick="openLightbox(2)">
+  <img src="image/Festival.jpeg" onclick="openLightbox(3)">
 </div>
 
 
@@ -98,7 +106,6 @@
         <p>
           Buscando talentos locales que puedan participar en el festival.
         </p>
-        <button>Compra tus Entradas</button>
       </div>
     </div>
     <div class="bank-option reverse fade-in">
@@ -107,7 +114,6 @@
         <p>
           Organizando eventos en diferentes parroquias de Quito para fomentar la participación comunitaria.
         </p>
-        <button>Conoce Más</button>
       </div>
       <div class="bank-image">
         <img src="image/Prueba2.jpeg" alt="Zona VIP Festival" />
@@ -122,7 +128,6 @@
         <p>
           Probablemente talleres, charlas o otras actividades que complementen el festival.
         </p>
-        <button>Ver Lineup</button>
       </div>
     </div>
     <div class="bank-option reverse fade-in">
@@ -131,7 +136,6 @@
         <p>
           Un evento final que reunirá a los mejores talentos y premiará a los ganadores.
         </p>
-        <button>Conoce Más</button>
       </div>
       <div class="bank-image">
         <img src="image/Prueba2.jpeg" alt="Zona VIP Festival" />
@@ -139,7 +143,7 @@
     </div>
 </section>
 
-<section class="carousel">
+<!-- <section class="carousel">
   <div class="carousel-container">
     <div class="carousel-slide">
       <img src="image/Musica_2.png" alt="Imagen 1">
@@ -150,27 +154,8 @@
     <button class="prev">&#10094;</button>
     <button class="next">&#10095;</button>
   </div>
-</section>
+</section> -->
 
-  <section class="newsletter">
-  <div class="form-container">
-    <h3>Subscribe our updates!</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
-    <form action="form-handler.php" method="POST">
-      <input type="text" name="Cedula" placeholder="Cédula" required />
-      <input type="text" name="Nombres" placeholder="Nombres" required />
-      <input type="text" name="Apellidos" placeholder="Apellidos" required />
-      <input type="email" name="CorreoElectronico" placeholder="Correo Electrónico" required />
-      <input type="text" name="Telefono" placeholder="Número de Teléfono" required />
-      <input type="text" name="Barrio" placeholder="Barrio" required />
-      <button type="submit">Enviar</button>
-    </form>
-  </div>
-
-  <div class="newsletter-image">
-  <img src="image/prubaimagen.jpg" alt="Imagen relacionada con la newsletter" />
-</div>
-</section>
 
 
 <div class="info-section">
@@ -195,32 +180,71 @@
 </div>
 
   <footer>
-    <div class="footer-section">
-      <h4>Latest Albums</h4>
-      <p>Sed fringilla consectetur</p>
-      <p>Mauris porta quis</p>
-    </div>
-    <div class="footer-section">
-      <h4>Our Pages</h4>
-      <p>Nam dapibus imperdiet</p>
-      <p>Primis in faucibus orci</p>
-    </div>
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <p>Nullam scelerisque mauris</p>
-      <p>Vivamus eget urna nec</p>
-    </div>
-    <div class="footer-bottom">
-      <p>Copyright © 2025 Your Company Name</p>
-    </div>
-  </footer>
-<button class="back-to-top">↑</button>
+  <div class="footer-section">
+    <h4>Festivales Recientes</h4>
+    <p>Festival de la Música Andina</p>
+    <p>Carnaval de Tradiciones</p>
+    <p>Raíces del Folclor</p>
+    <p>Noche de Ritmos Latinos</p>
+  </div>
+  <div class="footer-section">
+    <h4>Sobre el Festival</h4>
+    <p>Historia y Origen</p>
+    <p>Artistas Invitados</p>
+    <p>Voluntariado</p>
+    <p>Patrocinadores</p>
+  </div>
+  <div class="footer-section">
+    <h4>Síguenos</h4>
+    <p><a href="https://www.tiktok.com" target="_blank"><i class="fab fa-tiktok"></i> TikTok</a></p>
+    <p><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></p>
+    <p><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></p>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2025 Festival Nuestras Raíces - Celebrando la cultura y la tradición.</p>
+  </div>
+</footer>
+<a href="https://wa.me/521XXXXXXXXXX" target="_blank" class="whatsapp-button">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
+</a>
   <script src="js/script.js"></script>
+  
   <div id="lightbox" class="lightbox">
   <span class="close" onclick="closeLightbox()">&times;</span>
   <img class="lightbox-img" id="lightbox-img">
   <a class="prev" onclick="changeImage(-1)">&#10094;</a>
   <a class="next" onclick="changeImage(1)">&#10095;</a>
+</div>
+
+<!-- Modal de Inscripción -->
+<div id="modal-inscripcion" class="modal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    <h2 style="color: black;">Formulario de inscripción</h2>
+    <form action="form-handler.php" method="POST" enctype="multipart/form-data">
+      <input type="text" name="Cedula" placeholder="Cédula" required />
+      <input type="text" name="Nombres" placeholder="Nombres" required />
+      <input type="text" name="Apellidos" placeholder="Apellidos" required />
+      <input type="email" name="CorreoElectronico" placeholder="Correo Electrónico" required />
+      <input type="text" name="Telefono" placeholder="Número de Teléfono" required />
+      <input type="text" name="Barrio" placeholder="Barrio" required />
+
+      <select name="Parroquia" required>
+        <option value="" disabled selected>Selecciona tu parroquia</option>
+        <option value="Solanda">Solanda</option>
+        <option value="San Bartolo">San Bartolo</option>
+        <option value="Lloa">Lloa</option>
+        <option value="Calderon">Calderón</option>
+        <option value="Carcelen">Carcelén</option>
+        <option value="Llano Chico">Llano Chico</option>
+      </select>
+
+      <label for="video">Subir Video:</label>
+      <input type="file" name="video" accept="video/*" required />
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
 </div>
 
 </body>

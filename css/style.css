@@ -39,16 +39,20 @@ nav a {
 
 .hero {
   display: flex;
-  align-items: center;
+  align-items: flex-start; /* Alineamos arriba para que img y texto arranquen igual */
   justify-content: space-between;
-  padding: 50px;
-  background: url('https://images.unsplash.com/photo-1549899594-92e38f2286f3?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+  padding: 40px;
+  max-width: 100%;
   height: 100vh;
+  gap: 20px; /* Un poco de espacio entre texto e imagen */
 }
 
-.hero-text {
-  max-width: 50%;
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%; /* Que ocupe mitad del ancho, para que no quede muy estirado */
 }
+
 
 .hero-text h1 {
   font-size: 3.5em;
@@ -64,29 +68,52 @@ nav a {
   margin-bottom: 30px;
 }
 
+/* Botón */
 .btn-inscribirse {
-  padding: 15px 30px;
-  background: linear-gradient(45deg, #FF9900, #C73BFF);
+  display: inline-block;
+  padding: 15px 20px;
+  background: linear-gradient(45deg, #9ef77a, #df8106);
   border: none;
   border-radius: 30px;
   color: white;
   font-size: 1em;
   cursor: pointer;
   transition: background 0.3s ease;
+  user-select: none;
+  text-align: center;
+  line-height: normal; /* Para que ocupe todo el área */
+  /* Eliminar white-space: nowrap para evitar problemas con tamaño */
+  /* white-space: nowrap;  */
+  position: relative;
+  width: fit-content;
+  align-self: flex-start;
+  position: relative;
+  z-index: 10000; /* Alinea el botón al inicio del contenedor (izquierda) */
 }
-
 
 .btn-inscribirse:hover {
-  background: linear-gradient(45deg, #C73BFF, #FF9900);
+  background-color: #d35400;
 }
 
+.btn-inscribirse:active {
+  background-color: #b03e00;
+  transform: translateY(2px);
+}
+
+/* Imagen: pegada al borde derecho y más abajo */
 .hero-img {
-  max-width: 45%;
+  max-width:100%;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  top: 71px; /* Bajamos un poco la imagen */
+  right: -170px; /* Movemos un poco fuera del contenedor a la derecha para pegar borde */
 }
 
 .hero-img img {
   width: 100%;
   border-radius: 20px;
+  display: block; /* Para evitar espacios abajo de imagen */
 }
 
 .musical-notes {
@@ -535,27 +562,27 @@ body.dark-theme .back-to-top:hover {
     color: #ffb10b;
   }
 
-.back-to-top {
+.whatsapp-button {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #ff760b;
-  color: white;
+  z-index: 1000;
+  background-color: transparent;
   border: none;
-  width: 35px; 
-  height: 35px; 
-  border-radius: 50%; 
   cursor: pointer;
-  font-size: 24px; 
-  display: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-decoration: none;
 }
 
-.back-to-top:hover {
-  background-color: #ff5c00;
+.whatsapp-icon {
+  width: 60px; /* Puedes ajustar el tamaño */
+  height: 60px;
+  transition: transform 0.2s;
 }
+
+.whatsapp-icon:hover {
+  transform: scale(1.1);
+}
+
 
 
 
@@ -600,12 +627,82 @@ body.dark-theme .back-to-top:hover {
 
 footer {
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    font-family: Arial, sans-serif;
 }
 
-footer:hover {
-  background-color: #333;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  .footer-section a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    margin: 5px 0;
+  }
+
+  .footer-section a:hover {
+    color: #ff760b;
+  }
+
+  .footer-bottom {
+    border-top: 1px solid #ccc;
+    font-size: 0.9em;
+    color: #ff760b;
+  }
+/*Modales*/
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
 }
 
 
-  
+/* Formulario compacto */
+form {
+  background: #fff8f0;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  max-width: 320px;
+  margin: 20px auto;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+/* Inputs y selects más pequeños */
+form input[type="text"],
+form input[type="number"],
+form input[type="email"],
+form select {
+  width: 100%;
+  padding: 8px 12px;
+  margin: 8px 0 15px 0;
+  border: 1.8px solid #f39c12;
+  border-radius: 6px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form select:focus {
+  border-color: #d35400;
+  outline: none;
+}
+
+
