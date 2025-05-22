@@ -6,8 +6,8 @@
 }
 
 body {
-  background: linear-gradient(to right, #1f1c2c, #928DAB);
-  color: white;
+  
+  color: rgb(255, 255, 255);
   overflow-x: hidden;
 }
 
@@ -16,9 +16,38 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  background: transparent;
+   border-bottom: 1px solid rgb(255, 253, 253);
+  
 }
 
+.festival {
+  padding-left: 180px; /* ajusta el valor para mover más o menos */
+  font-size: 24px;
+  font-weight: 600;
+  color: #C15C44;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.nuestras-raices {
+  padding-left: 110px;
+  font-size: 48px;
+  font-weight: 700;
+  color: #203A4C;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+.nuestras-raices1 {
+  padding-left: 151px;
+  font-size: 48px;
+  font-weight: 700;
+  color: #203A4C;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
 
 /* Agrega aquí tus otros estilos para header, nav, hero, etc. */
 
@@ -31,7 +60,7 @@ header {
 }
 
 nav a {
-  color: white;
+  color: rgb(255, 253, 253);
   margin-left: 30px;
   text-decoration: none;
   font-weight: 300;
@@ -45,6 +74,7 @@ nav a {
   max-width: 100%;
   height: 100vh;
   gap: 20px; /* Un poco de espacio entre texto e imagen */
+   border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .hero-left {
@@ -55,7 +85,7 @@ nav a {
 
 
 .hero-text h1 {
-  font-size: 3.5em;
+  font-size: 4.5em;
   margin-bottom: 20px;
 }
 
@@ -67,12 +97,16 @@ nav a {
   font-size: 1.2em;
   margin-bottom: 30px;
 }
+.p-text{
+  padding: 10px;
+  color: #000000;
+}
 
 /* Botón */
 .btn-inscribirse {
   display: inline-block;
   padding: 15px 20px;
-  background: linear-gradient(45deg, #9ef77a, #df8106);
+  background: linear-gradient(45deg, #05c72f, #d16105);
   border: none;
   border-radius: 30px;
   color: white;
@@ -98,6 +132,7 @@ nav a {
 .btn-inscribirse:active {
   background-color: #b03e00;
   transform: translateY(2px);
+  
 }
 
 /* Imagen: pegada al borde derecho y más abajo */
@@ -131,86 +166,14 @@ nav a {
 }
 
 .social-icons a {
-  color: white; /* Cambia el color a blanco */
+  color: rgb(255, 255, 255); /* Cambia el color a blanco */
   font-size: 24px; /* Ajusta el tamaño de los íconos si lo deseas */
   transition: color 0.3s ease; /* Efecto de transición para el color */
 }
 
 .social-icons a:hover {
-  color: #ff760b; /* Color para el hover si quieres un cambio cuando el usuario pase el cursor */
+  color: rgb(99, 97, 248); /* Color para el hover si quieres un cambio cuando el usuario pase el cursor */
 }
-
-  
-/* Pagina cambiar a dark*/
-header.light-navbar {
-  background-color: white;
-}
-
-
-header.light-navbar a,
-header.light-navbar .social-icons a,
-header.light-navbar .theme-toggle {
-  color: #ff760b!important;
-}
-
-  body.dark-theme {
-  background-color: #121212; 
-  color: #ffffff; 
-}
-
-body.dark-theme .gallery {
-  background-color: #121212; 
-}
-
-body.dark-theme .gallery img {
-  border: 2px solid #ffffff; 
-}
-
-
-body.dark-theme .bank-section {
-  background-color: #121212; 
-}
-
-body.dark-theme .bank-option {
-  background-color: #1a1a1a; 
-}
-
-body.dark-theme .bank-text {
-  color: #ffffff;
-}
-
-body.dark-theme button {
-  background-color: #ffffff; 
-}
-
-body.dark-theme .hero-image {
-  background-color: #121212; 
-}
-
-body.dark-theme footer {
-  background-color: #121212;
-  color: #ffffff; 
-}
-
-body.dark-theme .carousel button {
-  background-color: rgba(109, 108, 108, 0.2); 
-  color: #fffefe; 
-}
-
-body.dark-theme .carousel button:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-body.dark-theme .back-to-top {
-  background-color: rgb(255, 252, 252); 
-  color: #f56c04; 
-}
-
-body.dark-theme .back-to-top:hover {
-  background-color: rgba(255, 255, 255, 0.5); 
-}
-
-/* Pagina cambiar a dark*/
   
 .theme-toggle {
   background: none;
@@ -311,14 +274,15 @@ body.dark-theme .back-to-top:hover {
     justify-content: center;
     gap: 100px;
     padding: 20px;
-    background-color: #fff;
+    background-color: #000000;
+   
   }
   
   .gallery img {
     height: 300px;
     width: auto;
     border-radius: 3px;
-    border: 2px solid #000;
+    border: 2px solid #ffffff;
     cursor: pointer;
   }
   
@@ -327,21 +291,22 @@ body.dark-theme .back-to-top:hover {
     flex-direction: column;
     gap: 50px;
     padding: 40px;
-    background-color: #fff;
+    background-color: #000000;
+    
   }
   
   .bank-option {
     display: flex;
     align-items: center;
     gap: 30px;
-    background-color: #e9e6e6;
+    background-color: #000000b7;
     padding: 20px;
     border-radius: 10px;
   }
   
   .bank-option.reverse {
     flex-direction: row-reverse;
-    background-color: #fff;
+    background-color: #000000;
   }
   
   .bank-image img {
@@ -363,7 +328,7 @@ body.dark-theme .back-to-top:hover {
   .bank-text p {
     font-size: 1.2rem;
     margin-bottom: 20px;
-    color: #000;
+    color: #ffffff;
   }
   
   .bank-text button {
@@ -388,56 +353,6 @@ body.dark-theme .back-to-top:hover {
     font-size: 1.2rem;
   }
 
-  .carousel {
-    position: relative;
-    width: 1000px;
-    max-width: px;
-    margin: 50px auto;
-    overflow: hidden;
-    
-  }
-  
-  .carousel-container {
-    position: relative;
-  }
-  
-  .carousel-slide {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .carousel-slide img {
-    width: 100%;
-    flex-shrink: 0;
-    height: 400px;
-    object-fit: cover;
-  }
-  
-  .carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.2); 
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    z-index: 1;
-    transition: background-color 0.3s ease;
-  }
-  
-  .carousel button:hover {
-    background-color: rgba(0, 0, 0, 0.4); 
-  }
-  
-  .prev {
-    left: 10px;
-  }
-  
-  .next {
-    right: 10px;
-  }
   
 
 .newsletter {
@@ -503,11 +418,14 @@ body.dark-theme .back-to-top:hover {
   text-align: center;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
+  background-color: rgb(0, 0, 0);
+  border-bottom: 1px solid rgb(255, 255, 255);
 }
 
 .info-section h2 {
   font-size: 24px;
   margin-bottom: 30px;
+  color: #fffdfd;
 }
 
 .card-grid {
@@ -541,8 +459,8 @@ body.dark-theme .back-to-top:hover {
 
   
   footer {
-    background-color: #000;
-    color: white;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
     display: flex;
     justify-content: space-around;
     padding: 20px;
@@ -633,7 +551,7 @@ footer {
 
   .footer-section a {
     text-decoration: none;
-    color: white;
+    color: rgb(255, 255, 255);
     display: inline-block;
     margin: 5px 0;
   }
@@ -643,9 +561,9 @@ footer {
   }
 
   .footer-bottom {
-    border-top: 1px solid #ccc;
+    border-top: 1px solid hsl(0, 0%, 99%);
     font-size: 0.9em;
-    color: #ff760b;
+    color: rgb(255, 255, 255);
   }
 /*Modales*/
 .modal {
@@ -662,7 +580,7 @@ footer {
 }
 
 .modal-content {
-  background-color: #fff;
+  background-color: #000000;
   margin: auto;
   padding: 20px;
   border-radius: 8px;

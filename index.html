@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/responsive.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 <style>
 #overlay-image {
   position: fixed;
@@ -14,8 +15,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('image/FondoFestival.jpeg') center center no-repeat;
-  background-size: cover;
+    background: url('image/WhatsApp\ Image\ 2025-05-18\ at\ 4.01.58\ PM\ \(1\).jpeg') center center no-repeat;
+    background-size: cover;
+  opacity: 3;
   z-index: -2; /* MÁS AL FONDO */
 }
 
@@ -28,21 +30,18 @@
   object-fit: cover;
   z-index: -1; 
   mix-blend-mode: screen; 
-  opacity: 0.6; 
+  opacity: 0.1; 
   pointer-events: none; 
 }
 
-
-  </style>
-</head>
+</style>
 <body>
-   <video autoplay muted loop id="video-background">
+    <video autoplay muted loop id="video-background">
     <source src="https://festivaldelacancion.ec/wp-content/themes/fesnace-wp/assets/video/video-cover.mp4" type="video/mp4">
     Tu navegador no soporta el video de fondo.
   </video>
 
   <div id="overlay-image"></div>
-
   <header>
     <!-- Redes sociales en el lado izquierdo -->
      <div class="social-icons">
@@ -64,9 +63,8 @@
 <section class="hero">
   <div class="hero-left">
     <div class="hero-text">
-      <h2>Kristina Dalgo te invita al</h2>
-      <img src="image/LogoFestival.png" alt="Logo Festival" />
-      <p>
+      <img src="image/WhatsApp_Image_2025-05-18_at_16.05.57-removebg-preview.png" alt="Logo Festival" />
+      <p class="p-text">
         El Festival "Nuestras Raíces" es una iniciativa cultural que busca
         recuperar y fortalecer la música popular en Quito.El proyecto se desarrollará en varias fases, que incluyen:
       </p>
@@ -74,7 +72,7 @@
     <button class="btn-inscribirse">Inscripciones</button>
   </div>
   <div class="hero-img">
-    <img src="image/Cantante.png" alt="Cantante festival" />
+    <img src="" alt="Cantante festival" />
   </div>
 </section>
 
@@ -86,6 +84,8 @@
   <img src="image/Festival.jpeg"onclick="openLightbox(1)">
   <img src="image/Festival.jpeg" onclick="openLightbox(2)">
   <img src="image/Festival.jpeg" onclick="openLightbox(3)">
+  <img src="image/Festival.jpeg" onclick="openLightbox(4)">
+  <img src="image/Festival.jpeg" onclick="openLightbox(5)">
 </div>
 
 
@@ -142,39 +142,17 @@
       </div>
     </div>
 </section>
-
-<!-- <section class="carousel">
-  <div class="carousel-container">
-    <div class="carousel-slide">
-      <img src="image/Musica_2.png" alt="Imagen 1">
-      <img src="image/Musica_2.png" alt="Imagen 2">
-      <img src="image/Musica_2.png" alt="Imagen 3">
-      <img src="image/Musica_2.png" alt="Imagen 4">
-    </div>
-    <button class="prev">&#10094;</button>
-    <button class="next">&#10095;</button>
-  </div>
-</section> -->
-
-
-
 <div class="info-section">
   <h2>Conoce más sobre:</h2>
   <div class="card-grid">
     <a href="#" class="info-card">
-      <img src="image/handsup_1707226_20240822123741.jpg" alt="Mi Banco Banco me enseña">
+      <img src="image/Musica_2.png" alt="Mi Banco Banco me enseña">
     </a>
     <a href="#" class="info-card">
       <img src="image/Musica_2.png" alt="COSEDE">
     </a>
     <a href="#" class="info-card">
-      <img src="image/handsup_1707226_20240822123741.jpg" alt="EDÚCATE">
-    </a>
-    <a href="#" class="info-card">
-      <img src="image/Musica_2.png" alt="Aula Virtual BdP">
-    </a>
-    <a href="#" class="info-card">
-      <img src="image/handsup_1707226_20240822123741.jpg" alt="UAFE">
+      <img src="image/Musica_2.png" alt="EDÚCATE">
     </a>
   </div>
 </div>
