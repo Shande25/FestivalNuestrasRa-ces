@@ -15,7 +15,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-    background: url('image/WhatsApp\ Image\ 2025-05-18\ at\ 4.01.58\ PM\ \(1\).jpeg') center center no-repeat;
+    background: url('image/FondoNegro.jpeg') center center no-repeat;
     background-size: cover;
   opacity: 3;
   z-index: -2; /* MÁS AL FONDO */
@@ -52,18 +52,16 @@
 
     <!-- Letras del navbar en el centro -->
     <nav>
-      <a href="#">Inicio</a>
-      <a href="#">Sobre el festival</a>
-      <a href="#">Galería</a>
-      <a href="#">Noticias</a>
-      <a href="#">Contacto</a>
+      <a href="#cantones">Cantones</a>
+  <a href="#sobre">Sobre el festival</a>
+  <a href="#conocer">Conocer más</a>
     </nav>
   </header>
 
 <section class="hero">
   <div class="hero-left">
     <div class="hero-text">
-      <img src="image/WhatsApp_Image_2025-05-18_at_16.05.57-removebg-preview.png" alt="Logo Festival" />
+      <img src="image/LogoFestival.png" alt="Logo Festival" />
       <p class="p-text">
         El Festival "Nuestras Raíces" es una iniciativa cultural que busca
         recuperar y fortalecer la música popular en Quito.El proyecto se desarrollará en varias fases, que incluyen:
@@ -78,16 +76,18 @@
 
   <div class="musical-notes"></div>
   
-  
-<div class="gallery ">
-  <img src="image/Festival.jpeg" onclick="openLightbox(0)">
-  <img src="image/Festival.jpeg"onclick="openLightbox(1)">
-  <img src="image/Festival.jpeg" onclick="openLightbox(2)">
-  <img src="image/Festival.jpeg" onclick="openLightbox(3)">
-  <img src="image/Festival.jpeg" onclick="openLightbox(4)">
-  <img src="image/Festival.jpeg" onclick="openLightbox(5)">
-</div>
 
+<div class="gallery" id="cantones">
+  <h2 class="section-title">Cantones Participantes</h2>
+  <div class="image-row">
+    <img src="image/cantones/Calderon.jpeg" onclick="openLightbox(0)">
+    <img src="image/cantones/Carcelen.jpeg" onclick="openLightbox(1)">
+    <img src="image/cantones/LlanoChico.jpeg" onclick="openLightbox(2)">
+    <img src="image/cantones/Lloa.jpeg" onclick="openLightbox(3)">
+    <img src="image/cantones/San Bartolo.jpeg" onclick="openLightbox(4)">
+    <img src="image/cantones/Solanda.jpeg" onclick="openLightbox(5)">
+  </div>
+</div>
 
 <!-- Recuadro flotante para previsualización -->
 <div id="previewBox" class="preview-box">
@@ -95,8 +95,8 @@
   <img id="previewImg" src="" alt="Vista previa">
 </div>
 
-
-  <section class="bank-section fade-in">
+  <section class="bank-section fade-in" id="sobre">
+<h2 class="section-title" id="sobre-titulo">Sobre el Festival</h2>
     <div class="bank-option">
       <div class="bank-image">
         <img src="image/Prueba1.jpeg" alt="Escenario de música en vivo" />
@@ -142,9 +142,10 @@
       </div>
     </div>
 </section>
+
 <div class="info-section">
-  <h2>Conoce más sobre:</h2>
-  <div class="card-grid">
+  <h2 class="section-title" id="conocer-titulo">Conocer Más</h2>
+  <div class="card-grid" id="conocer">
     <a href="#" class="info-card">
       <img src="image/Musica_2.png" alt="Mi Banco Banco me enseña">
     </a>
@@ -220,7 +221,9 @@
       <label for="video">Subir Video:</label>
       <input type="file" name="video" accept="video/*" required />
 
-      <button type="submit">Enviar</button>
+      <div class="button-container">
+  <button type="submit">Enviar</button>
+</div>
     </form>
   </div>
 </div>
