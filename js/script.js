@@ -76,3 +76,51 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+   const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  const prevBtn = document.querySelector('.carousel-btn.prev');
+  const nextBtn = document.querySelector('.carousel-btn.next');
+  let currentSlide = 0;
+  const intervalTime = 3000; // 3 segundos
+  let slideInterval;
+
+  function updateCarousel() {
+    const slideWidth = slides[0].getBoundingClientRect().width;
+    track.style.transform = 'translateX(-' + (slideWidth * currentSlide) + 'px)';
+  }
+
+  function startAutoplay() {
+    slideInterval = setInterval(() => {
+      currentSlide = (currentSlide + 1) % slides.length;
+      updateCarousel();
+    }, intervalTime);
+  }
+
+  function stopAutoplay() {
+    clearInterval(slideInterval);
+  }
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateCarousel();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+    updateCarousel();
+  });
+
+  // Opcional: pausa al pasar el ratón sobre el carrusel
+  const carouselContainer = document.querySelector('.carousel-container');
+  carouselContainer.addEventListener('mouseenter', stopAutoplay);
+  carouselContainer.addEventListener('mouseleave', startAutoplay);
+
+  window.addEventListener('resize', updateCarousel);
+  updateCarousel(); // posición inicial
+  startAutoplay();  // inicia autoplay
+ const menuToggle = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+
+  menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });

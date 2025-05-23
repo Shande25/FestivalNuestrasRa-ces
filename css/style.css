@@ -32,9 +32,10 @@ header {
 
 nav a {
   color: rgb(255, 253, 253);
-  margin-left: 30px;
+  margin-left: 10px;
+  top: 1px;
   text-decoration: none;
-  font-weight: 300;
+  font-weight: 550; /* Más grueso */
 }
 
 nav a:hover {
@@ -56,6 +57,11 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   max-width: 50%; /* Que ocupe mitad del ancho, para que no quede muy estirado */
+}
+.logo-festival {
+  width: 500px; /* Ajusta este valor al tamaño que necesites */
+  height: auto;
+  margin-bottom: 20px; /* Espacio debajo del logo */
 }
 
 .hero-img {
@@ -95,7 +101,7 @@ nav a:hover {
 .btn-inscribirse {
   display: inline-block;
   padding: 15px 20px;
-  background: linear-gradient(45deg, #05c72f, #d16105);
+   background: linear-gradient(45deg, #000000b6, #ff9203);
   border: none;
   border-radius: 30px;
   color: white;
@@ -125,6 +131,8 @@ nav a:hover {
 /* Imagen: pegada al borde derecho y más abajo */
 
 .social-icons {
+  z-index: 1001;
+  position: relative;
   display: flex;
   gap: 20px; /* Aumenta el espacio entre los íconos */
 }
@@ -273,7 +281,7 @@ nav a:hover {
   .bank-image img {
     width: 300px;
     border-radius: 2px;
-    border: 1px solid #000;
+    border: 2px solid #fff;
   }
   
   .bank-text {
@@ -313,22 +321,78 @@ nav a:hover {
   .bank-option.reverse .bank-text button {
     font-size: 1.2rem;
   }
+  /*Carrucel*/
+  .carousel-section {
+  text-align: center;
+  padding: 20px 20px;
+  background-color: #000; /* Fondo oscuro */
+}
+
+.carousel-container {
+  position: relative;
+  width: 80%; /* Cambia de 50% a 80% para hacerlo más ancho */
+  max-width: 1200px; /* Opcional, para limitar el ancho máximo */
+  margin: auto;
+  overflow: hidden;
+  border-radius: 1px;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-track img {
+  width: 100%;
+  height: 450px;  /* Altura fija */
+  object-fit: cover; /* Corta la imagen si es necesario */
+  border-radius: 15px;
+
+  flex: 0 0 100%;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  background-color: rgba(221, 221, 221, 0);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+  border-radius: 10%;
+}
+
+.carousel-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
 /*Conocer Màs*/
 .info-section {
   text-align: center;
-  padding: 60px;
   font-family: Arial, sans-serif;
-  background-color: rgb(0, 0, 0);
-  border-bottom: 1px solid rgb(255, 255, 255);
+  background-color: #000000;
+  padding: 20px 20px; /* Agrega espacio alrededor */
+  position: relative;
+  z-index: 1;
 }
 
 .info-section h2 {
-    background-color: #000;
+  background-color: #000000;
   font-size: 38px;
   font-weight: 700;
   text-align: center;
   color: #ffffff;
-  margin: 60px 0 20px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 2px;
   position: relative;
@@ -338,24 +402,25 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
 }
 
 .info-card {
-  display: block;
   width: 270px;
-  height: 150px;
-  border-radius: 8px;
+  height: 180px;
+  border-radius: 12px;
   overflow: hidden;
   background-color: #f0f0f0;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .info-card img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* Cambio clave: evita recortar partes importantes */
   display: block;
+  padding: 10px; /* Espacio interior para evitar que toquen los bordes */
 }
 
 .info-card:hover {
@@ -562,7 +627,7 @@ form select:focus {
   display: block;
   width: 60px;
   height: 4px;
-  background: linear-gradient(90deg, #FF9900, #C15C44);
+  background: linear-gradient(90deg, #FF9900, #ff5100);
   margin: 10px auto 0;
   border-radius: 2px;
 }

@@ -15,11 +15,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-    background: url('image/FondoNegro.jpeg') center center no-repeat;
-    background-size: cover;
-  opacity: 3;
+  background: url('image/WhatsApp\ Image\ 2025-05-22\ at\ 7.42.38\ PM.jpeg') center center no-repeat;
+  background-size: cover;
+  opacity: 1;
   z-index: -2; /* MÁS AL FONDO */
 }
+
 
 #video-background {
   position: fixed;
@@ -51,17 +52,22 @@
   </div>
 
     <!-- Letras del navbar en el centro -->
-    <nav>
-      <a href="#cantones">Cantones</a>
-  <a href="#sobre">Sobre el festival</a>
-  <a href="#conocer">Conocer más</a>
-    </nav>
+    <nav class="navbar">
+  <button class="menu-toggle" aria-label="Menú">
+    &#9776; <!-- símbolo hamburguesa -->
+  </button>
+  <div class="nav-links">
+    <a href="#cantones">Cantones</a>
+    <a href="#sobre">Sobre el festival</a>
+    <a href="#conocer">Conocer más</a>
+  </div>
+</nav>
   </header>
 
 <section class="hero">
   <div class="hero-left">
     <div class="hero-text">
-      <img src="image/LogoFestival.png" alt="Logo Festival" />
+      <img src="image/LogoFestival.png" alt="Logo Festival" class="logo-festival" />
       <p class="p-text">
         El Festival "Nuestras Raíces" es una iniciativa cultural que busca
         recuperar y fortalecer la música popular en Quito.El proyecto se desarrollará en varias fases, que incluyen:
@@ -70,7 +76,7 @@
     <button class="btn-inscribirse">Inscripciones</button>
   </div>
   <div class="hero-img">
-    <img src="" alt="Cantante festival" />
+    <img src="image/ChatGPT Image 22 may 2025, 06_54_46 p.m..png" alt="Cantante festival" />
   </div>
 </section>
 
@@ -143,14 +149,27 @@
     </div>
 </section>
 
+<section class="carousel-section">
+  <h2 class="section-title">Momentos del Festival</h2>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <img src="image/Prueba1.jpeg" alt="Imagen 1" />
+      <img src="image/Prueba2.jpeg" alt="Imagen 2" />
+      <img src="image/Prueba3.jpeg" alt="Imagen 3" />
+    </div>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+</section>
+
 <div class="info-section">
   <h2 class="section-title" id="conocer-titulo">Conocer Más</h2>
   <div class="card-grid" id="conocer">
     <a href="#" class="info-card">
-      <img src="image/Musica_2.png" alt="Mi Banco Banco me enseña">
+      <img src="image/Calderon.jpeg" alt="Mi Banco Banco me enseña">
     </a>
     <a href="#" class="info-card">
-      <img src="image/Musica_2.png" alt="COSEDE">
+      <img src="image/LlanoChico.jpeg" alt="COSEDE">
     </a>
     <a href="#" class="info-card">
       <img src="image/Musica_2.png" alt="EDÚCATE">
