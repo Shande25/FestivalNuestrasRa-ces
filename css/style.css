@@ -59,8 +59,8 @@ nav a:hover {
   max-width: 50%; /* Que ocupe mitad del ancho, para que no quede muy estirado */
 }
 .logo-festival {
-  width: 500px; /* Ajusta este valor al tamaño que necesites */
-  height: auto;
+  width: 800px; /* Ajusta este valor al tamaño que necesites */
+  height:460px;
   margin-bottom: 20px; /* Espacio debajo del logo */
 }
 
@@ -69,12 +69,13 @@ nav a:hover {
   position: relative;
   height: 100%;
   width: 100%;
-  top: 71px; /* Bajamos un poco la imagen */
+  top: 107px; /* Bajamos un poco la imagen */
   right: -170px; /* Movemos un poco fuera del contenedor a la derecha para pegar borde */
 }
 
 .hero-img img {
   width: 100%;
+  height: 90%;
   border-radius: 20px;
   display: block; /* Para evitar espacios abajo de imagen */
 }
