@@ -16,8 +16,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
-  
-  
+   height: 60px; 
 }
 
 /* Agrega aquí tus otros estilos para header, nav, hero, etc. */
@@ -25,11 +24,21 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 60px;
   font-weight: bold;
   color: #FF9900;
 }
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
 
+.navbar-logo {
+  height: 120px; /* Puedes cambiar este valor para ajustar el tamaño */
+  width: auto;
+  object-fit: contain;
+}
 nav a {
   color: rgb(255, 253, 253);
   margin-left: 10px;
@@ -46,10 +55,12 @@ nav a:hover {
   display: flex;
   align-items: flex-start; /* Alineamos arriba para que img y texto arranquen igual */
   justify-content: space-between;
-  padding: 40px;
+  overflow: hidden;
+  padding:1px;
   max-width: 100%;
   height: 100vh;
-  gap: 20px; /* Un poco de espacio entre texto e imagen */
+  padding-top: 130px;
+  gap: 1px; 
  
 }
 
@@ -59,9 +70,10 @@ nav a:hover {
   max-width: 50%; /* Que ocupe mitad del ancho, para que no quede muy estirado */
 }
 .logo-festival {
-  width: 800px; /* Ajusta este valor al tamaño que necesites */
-  height:460px;
+  width: 700px; /* Ajusta este valor al tamaño que necesites */
+  height:360px;
   margin-bottom: 20px; /* Espacio debajo del logo */
+ 
 }
 
 .hero-img {
@@ -69,8 +81,8 @@ nav a:hover {
   position: relative;
   height: 100%;
   width: 100%;
-  top: 107px; /* Bajamos un poco la imagen */
-  right: -170px; /* Movemos un poco fuera del contenedor a la derecha para pegar borde */
+  top: 64px; /* Bajamos un poco la imagen */
+  right: -30px; /* Movemos un poco fuera del contenedor a la derecha para pegar borde */
 }
 
 .hero-img img {
@@ -135,6 +147,7 @@ nav a:hover {
   z-index: 1001;
   position: relative;
   display: flex;
+  align-items: center;
   gap: 20px; /* Aumenta el espacio entre los íconos */
 }
 
@@ -325,7 +338,7 @@ nav a:hover {
   /*Carrucel*/
   .carousel-section {
   text-align: center;
-  padding: 20px 20px;
+  padding: 100px 20px;
   background-color: #000; /* Fondo oscuro */
 }
 
@@ -535,11 +548,20 @@ nav a:hover {
   z-index: 100;
   padding-top: 60px;
   left: 0;
+top: 0;
   top: 0;
   width: 100%;
   height: 100%;
   overflow: auto;
   background-color: rgba(0,0,0,0.7);
+}
+
+.close-modal {
+   position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 28px; /* Puedes subir más si quieres aún más grande */
+  cursor: pointer;
 }
 
 .modal-content {

@@ -44,30 +44,30 @@
 
   <div id="overlay-image"></div>
   <header>
-    <!-- Redes sociales en el lado izquierdo -->
-     <div class="social-icons">
-    <a href="https://www.facebook.com/share/1BieFJF4WG/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/festival.nuestras.raices/?utm_source=ig_web_button_share_sheet"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.tiktok.com/@festival.nuestras?_t=ZM-8wIojcN8lde&_r=1"><i class="fab fa-tiktok"></i></a>
+  <div class="logo-container">
+    <img src="image/NavbarLogo.png" alt="Logo Festival" class="navbar-logo" />
+    <div class="social-icons">
+      <a href="https://www.facebook.com/share/1BieFJF4WG/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://www.instagram.com/festival.nuestras.raices/?utm_source=ig_web_button_share_sheet"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.tiktok.com/@festival.nuestras?_t=ZM-8wIojcN8lde&_r=1"><i class="fab fa-tiktok"></i></a>
+    </div>
   </div>
 
-    <!-- Letras del navbar en el centro -->
-    <nav class="navbar">
-  <button class="menu-toggle" aria-label="Menú">
-    &#9776; <!-- símbolo hamburguesa -->
-  </button>
-  <div class="nav-links">
-    <a href="#cantones">Cantones</a>
-    <a href="#sobre">Sobre el festival</a>
-    <a href="#conocer">Conocer más</a>
-  </div>
-</nav>
-  </header>
+  <!-- Navbar (sin cambios) -->
+  <nav class="navbar">
+    <button class="menu-toggle" aria-label="Menú">&#9776;</button>
+    <div class="nav-links">
+      <a href="#cantones">Cantones</a>
+      <a href="#sobre">Sobre el festival</a>
+      <a href="#conocer">Conocer más</a>
+    </div>
+  </nav>
+</header>
 
 <section class="hero">
   <div class="hero-left">
     <div class="hero-text">
-      <img src="image/KRISTINA LOGO1.png" alt="Logo Festival" class="logo-festival" />
+      <img src="image/LOGOS FESTIVAL1 (1).png" alt="Logo Festival" class="logo-festival" />
       <p class="p-text">
         El Festival "Nuestras Raíces" es una iniciativa cultural que busca
         recuperar y fortalecer la música popular en Quito.El proyecto se desarrollará en varias fases, que incluyen:
@@ -86,12 +86,12 @@
 <div class="gallery" id="cantones">
   <h2 class="section-title">Cantones Participantes</h2>
   <div class="image-row">
-    <img src="image/cantones/Calderon.jpeg" onclick="openLightbox(0)">
-    <img src="image/cantones/Carcelen.jpeg" onclick="openLightbox(1)">
-    <img src="image/cantones/LlanoChico.jpeg" onclick="openLightbox(2)">
-    <img src="image/cantones/Lloa.jpeg" onclick="openLightbox(3)">
+    <img src="image/cantones/Solanda.jpeg" onclick="openLightbox(0)">
+    <img src="image/cantones/Calderon.jpeg" onclick="openLightbox(1)">
+    <img src="image/cantones/Lloa.jpeg" onclick="openLightbox(2)">
+    <img src="image/cantones/Carcelen.jpeg" onclick="openLightbox(3)">
     <img src="image/cantones/San Bartolo.jpeg" onclick="openLightbox(4)">
-    <img src="image/cantones/Solanda.jpeg" onclick="openLightbox(5)">
+    <img src="image/cantones/LlanoChico.jpeg" onclick="openLightbox(5)">
   </div>
 </div>
 
@@ -165,7 +165,7 @@ El cierre del festival será una gala especial donde los artistas más destacado
     <button class="carousel-btn next">&#10095;</button>
   </div>
 </section>
-
+<!--
 <div class="info-section">
   <h2 class="section-title" id="conocer-titulo">Conocer Más</h2>
   <div class="card-grid" id="conocer">
@@ -177,7 +177,7 @@ El cierre del festival será una gala especial donde los artistas más destacado
     </a>
   </div>
 </div>
-
+-->
   <footer>
   <div class="footer-section">
     <h4>Festivales Recientes</h4>
@@ -218,7 +218,7 @@ El cierre del festival será una gala especial donde los artistas más destacado
 <!-- Modal de Inscripción -->
 <div id="modal-inscripcion" class="modal">
   <div class="modal-content">
-    <span class="close-modal">&times;</span>
+    <span class="close-modal" style="color: black;">&times;</span>
     <h2 style="color: black;">Formulario de inscripción</h2>
     <form action="form-handler.php" method="POST" enctype="multipart/form-data">
       <input type="text" name="Cedula" placeholder="Cédula" required />
