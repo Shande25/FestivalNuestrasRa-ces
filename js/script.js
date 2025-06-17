@@ -31,13 +31,12 @@ function showPreview(element) {
     previewBox.style.display = 'none';
   }
   const images = [
-    'image/diapositiva1/1.jpg',
-    'image/diapositiva1/2.jpg',
-    'image/diapositiva1/3.jpg',
-    'image/diapositiva1/4.jpg',
-    'image/diapositiva1/5.jpg',
-    'image/diapositiva1/6.jpg',
-    'image/diapositiva1/7.jpg'
+    'image/diapositivas/SOLANDA_page-0001.jpg',
+    'image/diapositivas/CALDERON_page-0001.jpg',
+    'image/diapositivas/LLOA_page-0001.jpg',
+    'image/diapositivas/CARCELEN_page-0001.jpg',
+    'image/diapositivas/SANBARTOLO_page-0001.jpg',
+    'image/diapositivas/LLANOCHICO_page-0001.jpg'
   ];
   let current = 0;
   function openLightbox(index) {
