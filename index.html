@@ -57,7 +57,7 @@
   <nav class="navbar">
     <button class="menu-toggle" aria-label="Menú">&#9776;</button>
     <div class="nav-links">
-      <a href="#cantones">Cantones</a>
+      <a href="#cantones">Parroquias</a>
       <a href="#sobre">Sobre el festival</a>
       <a href="#conocer">Conocer más</a>
     </div>
@@ -84,7 +84,7 @@
   
 
 <div class="gallery" id="cantones">
-  <h2 class="section-title">Cantones Participantes</h2>
+  <h2 class="section-title">Parroquitas Participantes</h2>
   <div class="image-row">
     <img src="image/cantones/Solanda.jpeg" onclick="openLightbox(0)">
     <img src="image/cantones/Calderon.jpeg" onclick="openLightbox(1)">
@@ -154,18 +154,12 @@ El cierre del festival será una gala especial donde los artistas más destacado
 </section>
 
 <section class="carousel-section">
-  <h2 class="section-title">Momentos del Festival</h2>
-  <div class="carousel-container">
-    <div class="carousel-track">
-      <img src="image/Prueba1.jpeg" alt="Imagen 1" />
-      <img src="image/Prueba2.jpeg" alt="Imagen 2" />
-      <img src="image/Prueba3.jpeg" alt="Imagen 3" />
-    </div>
-    <button class="carousel-btn prev">&#10094;</button>
-    <button class="carousel-btn next">&#10095;</button>
+  <h2 class="section-title">Horarios de los Festivales</h2>
+  <div class="single-image-container">
+    <img src="image/Horario.jpeg" alt="Horario del Festival" />
   </div>
 </section>
-<!--
+
 <div class="info-section">
   <h2 class="section-title" id="conocer-titulo">Conocer Más</h2>
   <div class="card-grid" id="conocer">
@@ -177,7 +171,37 @@ El cierre del festival será una gala especial donde los artistas más destacado
     </a>
   </div>
 </div>
--->
+
+<div class="info-section-miembros">
+  <h2 class="section-title" id="miembros-titulo">Nuestro Equipo</h2>
+  <div class="card-grid" id="miembros">
+    <div>
+      <div class="info-card-miembros">
+        <img src="image/user-2935527_1280.webp" alt="Ana Torres">
+      </div>
+      <p class="nombre-integrante">Ana Torres</p>
+    </div>
+    <div>
+      <div class="info-card-miembros">
+        <img src="image/user-2935527_1280.webp" alt="Luis Mendoza">
+      </div>
+      <p class="nombre-integrante">Luis Mendoza</p>
+    </div>
+    <div>
+      <div class="info-card-miembros">
+        <img src="image/user-2935527_1280.webp" alt="Sofía Herrera">
+      </div>
+      <p class="nombre-integrante">Sofía Herrera</p>
+    </div>
+    <div>
+      <div class="info-card-miembros">
+        <img src="image/user-2935527_1280.webp" alt="Carlos Vélez">
+      </div>
+      <p class="nombre-integrante">Carlos Vélez</p>
+    </div>
+  </div>
+</div>
+
   <footer>
   <div class="footer-section">
     <h4>Festivales Recientes</h4>
@@ -237,8 +261,14 @@ El cierre del festival será una gala especial donde los artistas más destacado
         <option value="Carcelen">Carcelén</option>
         <option value="Llano Chico">Llano Chico</option>
       </select>
+          <select name="Horario" required>
+        <option value="" disabled selected>Opción de horario:</option>
+        <option value="10am - 13pm">10am - 13pm</option>
+        <option value="14pm - 17pm">14pm - 17pm</option>
+      </select>
 
-      <label for="video">Subir Video:</label>
+      <label style="color: black;" for="video">Subir Video</label>
+      <label style="color: black;" for="video">(duracion maxima 30 segundos):</label>
       <input type="file" name="video" accept="video/*" required />
 
       <div class="button-container">

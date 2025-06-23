@@ -41,7 +41,7 @@ header {
 }
 nav a {
   color: rgb(255, 253, 253);
-  margin-left: 10px;
+  margin-left: -40px;
   top: 1px;
   text-decoration: none;
   font-weight: 550; /* Más grueso */
@@ -65,9 +65,10 @@ nav a:hover {
 }
 
 .hero-left {
-  display: flex;
+   display: flex;
   flex-direction: column;
-  max-width: 50%; /* Que ocupe mitad del ancho, para que no quede muy estirado */
+  max-width: 50%;
+  margin-left: 70px;  /* Que ocupe mitad del ancho, para que no quede muy estirado */
 }
 .logo-festival {
   width: 700px; /* Ajusta este valor al tamaño que necesites */
@@ -80,7 +81,7 @@ nav a:hover {
   max-width:100%;
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 50%;
   top: 64px; /* Bajamos un poco la imagen */
   right: -30px; /* Movemos un poco fuera del contenedor a la derecha para pegar borde */
 }
@@ -336,58 +337,27 @@ nav a:hover {
     font-size: 1.2rem;
   }
   /*Carrucel*/
-  .carousel-section {
+.carousel-section {
   text-align: center;
   padding: 100px 20px;
-  background-color: #000; /* Fondo oscuro */
+  background-color: #000;
 }
 
-.carousel-container {
-  position: relative;
-  width: 80%; /* Cambia de 50% a 80% para hacerlo más ancho */
-  max-width: 1200px; /* Opcional, para limitar el ancho máximo */
+.single-image-container {
   margin: auto;
-  overflow: hidden;
-  border-radius: 1px;
-}
-.carousel-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-}
-
-.carousel-track img {
-  width: 100%;
-  height: 450px;  /* Altura fija */
-  object-fit: cover; /* Corta la imagen si es necesario */
+  border: 5px solid white;
   border-radius: 15px;
-
-  flex: 0 0 100%;
+  background-color: white;
+  display: inline-block;
 }
 
-.carousel-btn {
-  position: absolute;
-  top: 60%;
-  transform: translateY(-50%);
-  font-size: 30px;
-  background-color: rgba(221, 221, 221, 0);
-  color: white;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
-  z-index: 10;
-  border-radius: 10%;
-}
-
-.carousel-btn:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
-
-.carousel-btn.prev {
-  left: 10px;
-}
-
-.carousel-btn.next {
-  right: 10px;
+.single-image-container img {
+  max-width: 800px;
+  max-height: 1000px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
 
 /*Conocer Màs*/
@@ -395,7 +365,7 @@ nav a:hover {
   text-align: center;
   font-family: Arial, sans-serif;
   background-color: #000000;
-  padding: 20px 20px; /* Agrega espacio alrededor */
+  padding: 1px 1px; /* Agrega espacio alrededor */
   position: relative;
   z-index: 1;
 }
@@ -441,6 +411,70 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+/* Nuestro Equipo*/
+
+.info-section-miembros {
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #000000;
+  padding: 1px 1px;
+  position: relative;
+  z-index: 1;
+}
+
+.info-section-miembros h2 {
+  background-color: #000000;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+.card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.info-card-miembros {
+  width: 180px;    /* igual altura y ancho para círculo */
+  height: 180px;
+  border-radius: 50%;  /* círculo */
+  overflow: hidden;
+  background-color: #f0f0f0;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0;  /* quitar padding interno para no afectar círculo */
+}
+
+.info-card-miembros img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* para llenar el círculo sin deformar */
+  display: block;
+}
+
+.info-card-miembros:hover {
+  transform: scale(1.05);
+}
+
+.nombre-integrante {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+}
 /* Footer */
   
   footer {

@@ -38,7 +38,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "Correo: " . $_POST['CorreoElectronico'] . "\n" .
             "Teléfono: " . $_POST['Telefono'] . "\n" .
             "Barrio: " . $_POST['Barrio'] . "\n" .
-            "Parroquia: " . $_POST['Parroquia'];
+            "Parroquia: " . $_POST['Parroquia'] . "\n" .
+            "Horario: " . $_POST['Horario'];
 
         $mail->send();
         header("Location: enviado.html");
