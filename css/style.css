@@ -339,7 +339,7 @@ nav a:hover {
   /*Carrucel*/
 .carousel-section {
   text-align: center;
-  padding: 100px 20px;
+  padding: 5px 20px 20px 20px; /* top right bottom left */
   background-color: #000;
 }
 
@@ -347,17 +347,14 @@ nav a:hover {
   margin: auto;
   border: 5px solid white;
   border-radius: 15px;
-  background-color: white;
   display: inline-block;
+  /* puedes ajustar el tamaño aquí si quieres */
 }
 
 .single-image-container img {
-  max-width: 800px;
-  max-height: 1000px;
-  width: 100%;
-  height: auto;
-  object-fit: contain;
   display: block;
+  object-fit: contain; /* para mantener la proporción y que la imagen no se distorsione */
+  /* quito max-width y max-height para que puedas controlar el tamaño */
 }
 
 /*Conocer Màs*/
@@ -417,7 +414,7 @@ nav a:hover {
   text-align: center;
   font-family: Arial, sans-serif;
   background-color: #000000;
-  padding: 1px 1px;
+  padding: 60px 60px;
   position: relative;
   z-index: 1;
 }
@@ -438,12 +435,12 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 30px;
+  gap: 100px;
 }
 
 .info-card-miembros {
-  width: 180px;    /* igual altura y ancho para círculo */
-  height: 180px;
+  width: 170px;    /* igual altura y ancho para círculo */
+  height: 170px;
   border-radius: 50%;  /* círculo */
   overflow: hidden;
   background-color: #f0f0f0;
