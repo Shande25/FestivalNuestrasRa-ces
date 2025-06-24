@@ -435,12 +435,12 @@ nav a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 100px;
+  gap: 70px;
 }
 
 .info-card-miembros {
-  width: 170px;    /* igual altura y ancho para círculo */
-  height: 170px;
+  width: 120px;    /* igual altura y ancho para círculo */
+  height: 120px;
   border-radius: 50%;  /* círculo */
   overflow: hidden;
   background-color: #f0f0f0;
